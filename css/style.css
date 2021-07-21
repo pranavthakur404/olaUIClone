@@ -1,0 +1,941 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Encode Sans SC', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    font-size: 15px;
+    overflow-x:hidden;
+}
+.clearfix::after{
+   content: "";
+   display: block;
+   clear: both;
+}
+.center-div{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+/* header{
+  display: none;
+ 
+} */
+.small-header{
+    width: 100%;
+    display: none;
+}
+.small-header .accordion{
+    max-width: 1200px;
+    margin: 0 auto;
+   
+    padding: 1%  2%;
+}
+.toggle{
+    display: none;
+}
+.small-header .accordion .accordion-tab label{
+  display: block;
+  font-size: 1.5rem;
+  color: grey;
+  cursor: pointer;
+}
+.small-header .accordion .accordion-tab .accordion-content{
+    width: 200px;
+    text-align: center;
+    background: #fafafa;
+    position: absolute;
+    z-index: 10;
+    display: none;
+}
+.small-header .accordion .accordion-tab .accordion-content p{
+    display: block; 
+     padding: 10px; 
+}
+.small-header .accordion .accordion-tab .accordion-content p:hover{
+    background: grey;
+    cursor: pointer;
+}
+.accordion .accordion-tab input[type="checkbox"]:checked ~ .accordion-content{
+    display: block;
+}
+
+
+ 
+/* top-navigation start */
+.top-navigation{
+    width: 100%;
+    background: #000000;
+    color:rgb(174, 174, 175);
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.top-navigation p a{
+    margin-right: 20px;
+    text-decoration: none;
+    color:rgb(174, 174, 175);
+    font-size: 0.8rem;
+}
+.top-navigation p a::after{
+    content: " | ";
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+/* accordion */
+
+
+
+/* main navition */
+.main-navigation{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-shadow: 0px 5px 7px grey;
+}
+.main-navigation .logo img{
+    width: 120px;
+}
+.main-navigation .nav-links{
+    display: flex;
+}
+.main-navigation .nav-links p{
+    margin-top: 10px;
+}
+.main-navigation .nav-links p a{
+    text-decoration: none;
+    color: #000000;
+    margin-right: 20px;
+}
+.main-navigation .nav-links button{
+    background: #9af23d;
+    border: none;
+    padding: 7px 15px;
+}
+.main-navigation .nav-links button a{
+    text-decoration: none;
+    color: #000000;
+
+}
+/* .main started */
+
+main{
+    width: 100%;
+    height: 600px;
+    background-image: url('../images/banner.jpg');
+    background-position: center top;
+    background-size: cover;
+}
+main .main-inner{
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    padding-top: 50px;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+main .main-inner p{
+    margin-top: 10px;
+}
+
+/* ola tabs */
+.ola-tabs{
+    width: 397px;
+    position: relative;
+    margin-top: 50px;
+}
+
+.ola-tabs li{
+    color: #000;
+    list-style: none;
+    float: left;
+    display: block;
+}
+.ola-tabs input[type="radio"]{
+    display: none;
+}
+.ola-tabs label{
+    display: inline-block;
+    padding:10px 29px;
+    /* border-radius: 20px; */
+    margin-bottom: 2%;
+    background: #fff;
+    /* margin-right: 10px; */
+    cursor: pointer;
+}
+
+.ola-tabs .tab-content{
+    font-size: 0.8rem;
+    padding-top: 2%;
+    position: absolute;
+    left: 0px;
+    background: #fafafa;
+    padding-bottom: 2%;
+    display: none;
+}
+.ola-tabs .tab-content form input{
+    width: 90%;
+    border: none;
+    background: #e2e2e2;
+    padding: 5px;
+    margin-top:10px ;
+}
+.ola-tabs .tab-content form select{
+    width: 90%;
+    background: #e2e2e2;
+    border: none;
+    margin-top: 10px;
+    padding: 5px;
+}
+.ola-tabs .tab-content form button{
+    width:90%;
+    height: 30px;
+    background: #cddc39;
+    border: none;
+    margin-top: 10px;
+}
+.ola-tabs [id^="ola-tabs"]:checked ~ .tab-content{
+    display: block;
+}
+.ola-tabs [id^="ola-tabs"]:checked ~ label{
+    background: #cddc39;
+}
+/* ola tabs ends */
+
+/* .three slide start */
+.three-slide{
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    overflow:hidden ;
+    border: 1px solid silver;
+    position: relative;
+    top: -50px;
+    background: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0px 5px 7px 0px lightskyblue;
+}
+.three-slide .box{
+    width: 500px;
+    border: 1px solid grey;
+    border-top: none;
+    border-bottom: none;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 5%;
+    animation: slide 5s linear infinite alternate;
+}
+@keyframes slide {
+    0%{
+        transform: translateX(-50px);
+    }
+    100%{
+        transform: translateX(100px);
+    }
+}
+.three-slide .box h1{
+    font-size: 0.9rem;
+    color:#3498db;
+    cursor: pointer;
+}
+.three-slide .box h1:hover{
+    color: #cddc39;
+}
+.three-slide .box i{
+    font-size: 2rem;
+    color: #cddc39;
+}
+.three-slide .box p{
+    font-size: 0.8rem;
+    color: grey;
+}
+.three-slide .border-left{
+    border-left: none;
+}
+.three-slide .border-right{
+    border-right: none;
+}
+/* three slide ends */
+
+/* occasion three section start */
+
+.ocassion-three-section{
+    max-width: 1100px;
+    margin: 0 auto;
+   margin-bottom: 50px;
+   padding: 0px 1%;
+}
+.ocassion-three-section h1{
+    letter-spacing: 3px;
+}
+.ocassion-three-section p{
+    color: grey;
+    margin-bottom: 50px;
+}
+.ocassion-three-section .three-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.ocassion-three-section .three-box .box{
+    width: 32%;
+
+}
+.ocassion-three-section .three-box .box .image{
+    width: 100%;
+    height: 30vh;
+    position: relative;
+    /* background: url('../images/img1.jpg'); */
+}
+.ocassion-three-section .three-box .box1 .image{
+    background: url('../images/img1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.ocassion-three-section .three-box .box2 .image{
+    background: url('../images/img2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.ocassion-three-section .three-box .box3 .image{
+    background: url('../images/img3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* .ocassion-three-section .three-box .box .image img{
+    width: 100%;
+    height: 30vh;
+} */
+.ocassion-three-section .three-box .box .text{
+    padding: 1% 3%;
+    padding-bottom: none;
+}
+.ocassion-three-section .three-box .box .text h2{
+    font-size:1rem;
+    font-weight: 400;
+    color: rgb(67, 72, 77);
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+.ocassion-three-section .three-box .box1 .three-icons{
+    margin-top: 40px;
+}
+.ocassion-three-section .three-box .box2 .three-icons{
+    margin-top:20px;
+}
+.ocassion-three-section .three-box .box3 .three-icons{
+    margin-top:60px;
+}
+.ocassion-three-section .three-box .box .text p{
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin-top: 10px;
+    line-height: 25px;
+    margin-bottom: 0px;
+}
+.ocassion-three-section .three-box .box .three-icons{
+    display: flex;
+    justify-content: space-between;
+    padding:0 3%;
+}
+.ocassion-three-section .three-box .box .three-icons .box{
+    width: 33.33%;
+    display: flex;
+    font-size: 0.9rem;
+    justify-content: space-evenly;
+}
+.ocassion-three-section .three-box .box .three-icons .box img{
+    width: 20%;
+    margin: 0px;
+    padding: 0px;
+}
+.ocassion-three-section .three-box .box .three-icons .box p{
+    margin: 0px;
+    color: rgb(70, 70, 70);
+}
+
+.ocassion-three-section .three-box .box1, .ocassion-three-section .three-box .box2, .ocassion-three-section .three-box .box3{
+    padding-bottom: 2%;
+    box-shadow:1px 5px 5px 1px rgb(211, 211, 211) ;
+}
+
+#single-text{
+    margin-top: 7px;
+}
+
+.ocassion-three-section .box .image img{
+    position: absolute;
+    width: 20%;
+    background: #cddc39;
+    padding: 2%;
+    border-radius: 100px;
+    top:130px;
+    right:10px;
+
+}
+/* occasion three section ends */
+
+/* benefit section start */
+
+.benefit{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 5% 1%;
+}
+.benefit .two-section{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.benefit .two-section .section{
+    width: 48%;
+}
+.benefit .two-section .section .box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom:25px;
+}
+.benefit .two-section .section .box img{
+    width: 30%;
+    height: 20vh;
+}
+.benefit .two-section .section .box .text{
+    padding: 1%;
+}
+.benefit .two-section .section .box .text h4{
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+.benefit .two-section .section .box .text p{
+    font-size: 0.9rem;
+    color: grey;
+    line-height: 20px;
+}
+
+/* benefit section ends */
+
+/* fleet-section start */
+
+.fleet{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 5% 1%;
+}
+.fleet h1{
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+.fleet p{
+    color: grey;
+}
+.fleet .fleet-icon{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.fleet .fleet-icon .box{
+    text-align: center;
+    width: 8%;
+}
+.fleet .fleet-icon .box .img{
+    width: 90%;
+    border-radius: 100%;
+    overflow: hidden;
+}
+.fleet .fleet-icon .box .img img{
+    width: 100%;
+}
+.fleet .fleet-icon .box .img:hover{
+    background-color: #cddc39;
+    cursor: pointer;
+}
+
+.fleet .fleet-icon .box .img:hover img{
+    animation: move 0.5s linear 1;
+}
+
+/* .fleet .fleet-icon .box .img img:hover{
+    animation: move 0.5s linear 1;
+} */
+@keyframes move {
+     0%{
+          transform: translateX(-50px);
+     }
+     100%{
+        transform: translateX(0px);
+   }
+}
+.fleet .fleet-icon .box p{
+    color: #000;
+}
+/* fleet-section ends */
+
+/* slide section start */
+
+
+.slide{
+    width: 100%;
+    list-style: none;
+    position: relative;
+    margin-top: 100px;
+
+}
+.slide li{
+    float: left;
+    display: block;
+}
+
+.slide label{
+    font-size: 1.5rem;
+    cursor: pointer;
+    /* margin-right:75px; */;
+    
+}
+.slide input[type="radio"]{
+    display: none;
+}
+.slide .tab-content{
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+     background: #fafafa;
+     position: absolute;
+     left: 0px;
+     display: none;
+ 
+}
+.slide .tab-content .box{
+    width: 50%;
+    padding: 2%;
+}
+.slide .tab-content .img img{
+    width: 100%;
+}
+.slide .tab-content .text{
+    padding-left: 50px;
+}
+.slide .tab-content .text h1{
+    font-size: 1.5rem;
+    margin-top: 15%;
+}
+.slide .tab-content .text h5{
+    font-weight: 500;
+}
+.slide .tab-content .text p{
+    font-size: 0.8rem;
+    color: rgb(138, 138, 138);
+    margin-top: 20px;
+    line-height: 25px;
+}
+.slide .tab-content .text .slide-img img{
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 100%;
+}
+
+.slide [id^="tab"]:checked + label{
+    color: #cddc39;
+}
+.slide [id^="tab"]:checked ~ .tab-content{
+    display: flex;
+}
+/* .slide .tab-content .text .slide-img img:hover{
+    background: #cddc39;
+}
+.slide [id^="tab"]:checked + label{
+      color: #cddc39;
+} */
+/* .slide [id^="tab"]:checked ~ .tab-content{
+    display: flex;
+    justify-content: space-between;
+} */
+
+/* slide section ends */
+
+.store{
+    width: 100%;
+   margin-top: 400px;
+   padding: 0% 5%;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   position: relative;
+}
+.store .box{
+    width: 45%;
+}
+.store .text h1{
+    margin-top: 20%;
+}
+.store .text p{
+    margin-top: 15px;
+    color: silver;
+}
+.store .text .store-image{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+.store .text .store-image img{
+    width: 32%;
+}
+
+.store .img img{
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* store three-section  */
+.three-section{
+    max-width:1200px;
+    margin: 0 auto;
+    padding: 1% 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.three-section .box{
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding:2% 0%;
+}
+.three-section .box img{
+    width: 20%;
+}
+.three-section .box .text h1{
+    font-size: 1rem;
+    padding-left: 3%;
+}
+.three-section .box .text p{
+    font-size: 0.8rem;
+    padding-left: 3%;
+}
+/* .three-section ends */
+
+/* footer start */
+footer{
+    background: #393939;
+    color: #fff;
+}
+.footer-inner{
+    padding: 5% 1%;
+}
+.footer-inner .section1{
+   width: 100%;
+   border-bottom: 1px solid grey ;
+   padding-bottom: 15px;
+}
+
+/* section 2 */
+.footer-inner .section2{
+    width: 100%;
+    padding: 15px 0px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.footer-inner .section2 .box{
+    width: 25%;
+}
+
+.footer-inner .section2 .box p{
+    font-weight: 100;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 0.7rem;
+}
+.footer-inner .section2 .box p:hover{
+    color: #cddc39;
+}
+/* section 2 ends */
+
+/* .section 3 */
+
+.footer-inner .section3{
+    font-size: 0.7rem;
+    padding: 15px 0px;
+    text-align: center;
+    border-bottom: 1px solid grey;
+    font-weight: 100;
+}
+.footer-inner .section3 p:hover{
+    color: #cddc39;
+    cursor:pointer;
+}
+
+/* .section 3 ends */
+
+/* section4 */
+
+.footer-inner .section4{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px 0px;
+}
+.footer-inner .section4 .box{
+    width: 45%;
+}
+.footer-inner .section4 .text{
+    display: flex;
+    justify-content: space-between;
+}
+.footer-inner .section4 .text i{
+    font-size: 2rem;
+    margin-right: 10px;
+}
+.footer-inner .section4 .country-tab .accordion{
+      width: 200px;
+      position: relative;
+      margin-left: 50%;
+
+}
+.footer-inner .section4 .country-tab .accordion input{
+    display: none;
+}
+.footer-inner .section4 .country-tab .accordion label{
+    display: block;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+.footer-inner .section4 .country-tab .accordion label  img{
+    width: 30px;
+}
+.footer-inner .section4 .country-tab .accordion .accordion-tab{
+    width: 100%;
+    background: #ffff;
+    color: rgb(14, 14, 14);
+    text-align: center;
+    display: none;
+    position: absolute;
+}
+
+.footer-inner .section4 .country-tab .accordion .accordion-tab p{
+    border: 1px solid grey;
+    cursor: pointer;
+}
+.footer-inner .section4 .country-tab .accordion .accordion-tab p:hover{
+    color: #cddc39;
+}
+.footer-inner .section4 .country-tab .accordion .toggle:checked ~ .accordion-tab{
+   display: block;
+}
+/* section 4 ends */
+
+/* section 5 start */
+
+.footer-inner .section5{
+    width: 100%;
+    padding: 15px 0px;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    display: flex;
+    justify-content: 
+    space-between;
+    flex-wrap: wrap;
+}
+.footer-inner .section5 .box{
+    width: 70%;
+}
+.footer-inner .section5 .box1{
+    display: flex;
+    justify-content: space-between;
+}
+.footer-inner .section5 .box1 .list{
+    display: flex;
+    font-size: 0.8rem;
+}
+.footer-inner .section5 .box1 .list p{
+    margin-right: 10px;
+}
+.footer-inner .section5 .box1 .list p:hover{
+    color: #cddc39;
+    cursor: pointer;
+}
+.footer-inner .section5 .box2{
+    width: 20%;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* section 5 ends */
+
+.footer-inner .section6{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0px;
+}
+.footer-inner .section6 .text{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+}
+
+/* section 6 ends */
+
+/* .section 7 start */
+
+.section7{
+    width: 100%;
+    text-align: right;
+    font-size: 0.8rem;
+}
+/* section7  */
+
+/* media query start */
+
+@media only screen and (max-width:831px){
+    html{
+        font-size:12px;
+    }
+    .benefit .two-section .section{
+        width: 80%;
+        margin: 30 auto;
+    }
+    .fleet .fleet-icon .box{
+        width: 20%;
+    }
+        
+}
+@media only screen and (max-width:768px){
+
+    header{
+        display: none;
+    }
+    .small-header{
+        display: block;
+    }
+    html{
+        font-size:15px;
+    }
+    
+    .ola-tabs{
+        width: 100%;
+        top: 50px;
+        
+    }
+    .ola-tabs label{
+        padding: 15px 30px;
+    }
+    .slide .tab-content .box{
+        width: 100%;
+    }
+    .store{
+        margin-top: 600px;
+    }
+    .store .box{
+        width: 100%;
+    }
+    .store .img img{
+        margin-top: 30px;
+    }
+    .three-section .box{
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .three-section .box img{
+        width: 20%;
+        margin: 0 auto;
+    }
+    .footer-inner .section1{
+        text-align: center;
+    }
+    .footer-inner .section2 .box{
+        width: 100%;
+        text-align: center;
+        margin-top: 50px;
+    }
+    .footer-inner .section4 .box{
+        width: 100%;
+        text-align: center;
+    }
+    .footer-inner .section4 .text{
+        flex-direction: column;
+    }
+    .footer-inner .section4 .text .icons{
+        margin-top: 20px;
+    }
+    .footer-inner .section4 .country-tab .accordion{
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    .footer-inner .section5 .box{
+        width: 100%;
+        text-align: center;
+    }
+    .footer-inner .section5 .box1{
+           flex-direction: column;
+    }
+    .footer-inner .section5 .box1 .list{
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-top: 20px;
+    }
+    .footer-inner .section5 .box2{
+        flex-direction: column;
+    }
+    .footer-inner .section5 .box2 p{
+        margin-top: 20px;
+    }
+    .footer-inner .section6{
+        flex-direction: column;
+    }
+    .footer-inner .section6 .text{
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        line-height: 25px;
+    }
+    .footer-inner .section6 img{
+        width: 20%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .section7{
+        text-align: center;
+    }
+        
+}
+
+@media only screen and (max-width:1024px){
+    .ocassion-three-section .three-box .box{
+        width: 100%;
+    }
+    .ocassion-three-section .box .image img{
+        width: 15%;
+    }
+    .ocassion-three-section .three-box .box{
+        margin-top: 30px;
+    }
+}
+@media only screen and (max-width:1200px){
+   
+    .ocassion-three-section .box .image img{
+        width: 10%;
+    }
+}
+
+
+
+
+
+
